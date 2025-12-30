@@ -11,9 +11,9 @@ class Magikpod < Formula
 
   depends_on "rust" => :build
 
-  # libkrun for MicroVM support (macOS only for now)
+  # libkrun for MicroVM support (macOS only)
   on_macos do
-    depends_on "libkrun"
+    depends_on "slp/krun/libkrun"
   end
 
   def install
