@@ -1,25 +1,25 @@
-# Homebrew Tap for magikrun
+# Homebrew Tap for magikpod
 
-Unified OCI runtime for containers, WebAssembly, and microVMs.
+Pod-native runtime on OCI containers, WebAssembly, and microVM isolation.
 
 ## Installation
 
 ```bash
-brew tap magikrun/magikrun
-brew install magikrun
+brew tap magikrun/magikpod
+brew install magikpod
 ```
 
 ## Formulae
 
 | Formula | Description |
 |---------|-------------|
-| `magikrun` | Unified OCI runtime for containers, WASM, and microVMs |
+| `magikpod` | Pod-native runtime on OCI containers, WebAssembly, and microVM isolation |
 
 ## Updating
 
 ```bash
 brew update
-brew upgrade magikrun
+brew upgrade magikpod
 ```
 
 ## From Source
@@ -27,13 +27,13 @@ brew upgrade magikrun
 If you prefer to install from crates.io:
 
 ```bash
-cargo install magikrun
+cargo install magikpod
 ```
 
 ## Requirements
 
-- macOS 11.0+ (for Hypervisor.framework support)
-- Linux with KVM (for native container and MicroVM support)
+- macOS 11.0+ (for Hypervisor.framework support with libkrun)
+- Rust toolchain (installed automatically via rustup dependency)
 
 ## License
 
