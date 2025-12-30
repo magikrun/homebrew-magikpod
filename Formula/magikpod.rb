@@ -17,7 +17,8 @@ class Magikpod < Formula
   end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    # Build with CLI feature enabled
+    system "cargo", "install", "--features", "cli", *std_cargo_args
 
     # Sign binary with hypervisor entitlements for MicroVM support
     # Uses entitlements.plist from the source repository
