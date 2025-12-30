@@ -18,6 +18,22 @@ class Magikpod < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    # Create entitlements file for hypervisor access
+    entitlements = buildpath/"entitlements.plist"
+    entitlements.write <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+      <dict>
+        <key>com.apple.security.hypervisor</key>
+        <true/>
+      </dict>
+      </plist>
+    EOS
+
+    # Sign binary with hypervisor entitlements for MicroVM support
+    system "codesign", "--entitlements", entitlements, "--force", "-s", "-", bin/"magikpod"
   end
 
   test do
