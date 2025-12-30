@@ -4,8 +4,8 @@
 class Magikpod < Formula
   desc "Pod-native runtime on OCI containers, WebAssembly, and microVM isolation"
   homepage "https://github.com/magikrun/magikpod"
-  url "https://github.com/magikrun/magikpod/archive/refs/tags/v0.3.8.tar.gz"
-  sha256 "f94be44103f321c3b876e5c019be9b96002e67ba21cd1bd952a7b7375e234aff"
+  url "https://github.com/magikrun/magikpod/archive/refs/tags/v0.3.9.tar.gz"
+  sha256 "9dfb8ac13f63f851164196500dc3874e119585a62f749b1fddf73f26ec80c613"
   license "Apache-2.0"
   head "https://github.com/magikrun/magikpod.git", branch: "main"
 
